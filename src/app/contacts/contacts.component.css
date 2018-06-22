@@ -1,0 +1,84 @@
+.headings {
+  height: 70px;
+  background-color: #303030;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.name {
+  width: 25%;
+  border-right: 1px solid darkgray;
+}
+
+.type{
+  width: 75%;
+}
+
+tbody tr:hover {
+  cursor: pointer;
+}
+
+/*tbody tr div{*/
+  /*max-height: 10px !important;*/
+  /*overflow: visible;*/
+/*}*/
+
+td .name{
+  height: 25px;
+}
+
+.type {
+  position: relative;
+}
+
+.type .details{
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  background-color: #404040;
+  text-align: center;
+  width: 100%;
+}
+
+.details pre {
+  text-align: left;
+  color: white;
+  font-style: inherit;
+  margin: 0;
+  padding: 15px;
+}
+
+td .name::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: limegreen;
+  border-radius: 7.5px;
+}
+
+.not-active {
+  opacity: 0.1;
+}
+
+.active {
+  background-color: #404040 !important;
+}
+
+.select-options{
+  position: relative;
+  height: 65px;
+  background-color: #303030;
+  font-weight: bold;
+  font-size: small;
+}
+
+.select-options select {
+  position: absolute;
+  right: 1%;
+  top: 25%;
+}
+
+/*tr:not(.active) {*/
+  /*opacity: 0.1;*/
+/*}*/

@@ -1,0 +1,31 @@
+<table>
+  <thead>
+    <tr class="headings">
+      <th colspan="2">Contacts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let contact of contacts; let i=index" (click)="detailsData(i)" (blur)="outOfFocus()" [ngClass]="{'active': displayDetails[i]}">
+      <td class="name">{{contact.name}}</td>
+      <td class="type">
+        <div *ngIf="!displayDetails[i] && type == 'Email address'">{{contact.email}}</div>
+        <div *ngIf="!displayDetails[i] && type == 'Phone number'">{{contact.phone}}</div>
+        <div class="details" *ngIf="displayDetails[i]">
+          <pre>
+            {{contact.email}}
+
+            {{contact.phone}}
+
+            {{contact.street}}
+            {{contact.city}} {{contact.state}} {{contact.zipCode}}</pre>
+        </div>
+      </td>
+</tr>
+  </tbody>
+</table>
+<div class="select-options">
+  <select (change)="dataTypeChange($event.target.value)">
+    <option *ngFor="let item of optionType" [value]="item">{{item}}</option>
+  </select>
+</div>
+
