@@ -12,6 +12,8 @@
 
 .type{
   width: 75%;
+  position: relative;
+  color: #686868;
 }
 
 tbody tr:hover {
@@ -27,16 +29,12 @@ td .name{
   height: 25px;
 }
 
-.type {
-  position: relative;
-}
-
 .type .details{
   position: absolute;
   top: 0;
   z-index: 10;
   background-color: #404040;
-  text-align: center;
+  text-align: left;
   width: 100%;
 }
 
@@ -45,7 +43,9 @@ td .name{
   color: white;
   font-style: inherit;
   margin: 0;
-  padding: 15px;
+  padding: 2% 2%;
+  width: fit-content;
+  white-space: pre-line;
 }
 
 td .name::before {
@@ -62,7 +62,11 @@ td .name::before {
 }
 
 .active {
-  background-color: #404040 !important;
+  background-color: #505050 !important;
+}
+
+.active .type{
+  padding-left: 0;
 }
 
 .select-options{
